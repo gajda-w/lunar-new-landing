@@ -66,7 +66,7 @@ export default function Home() {
               {
                 icon: <Mic2 className="w-8 h-8" />,
                 title: "Brzmienie, jakiego szukasz",
-                desc: "Nagrywam, miksuję i masteruję tak, żeby Twoja muzyka brzmiała dokładnie tak, jak sobie wymarzyłeś.",
+                desc: "Nagrywam, miksuję i masteruję, żeby Twoja muzyka brzmiała dokładnie tak, jak sobie wymarzyłeś.",
               },
               {
                 icon: <Music2 className="w-8 h-8" />,
@@ -168,29 +168,25 @@ export default function Home() {
             <div className="bg-white/5 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/30 hover:border-purple-500 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-purple-400">
-                  <Star className="w-8 h-8" />
+                  <Award className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-semibold">Dodatkowe usługi</h3>
+                <h3 className="text-2xl font-semibold">Mixing & Mastering</h3>
               </div>
               <div className="mb-6">
-                {/* <div className="text-2xl font-bold text-purple-400 mb-2">
-                  $80/hour
+                <div className="text-2xl font-bold text-purple-400 mb-2">
+                  od 200zł
                 </div>
                 <p className="text-gray-400 mb-4">
-                  Full production service for solo artists and bands
-                </p> */}
+                  Profesjonalny Mix i Mastering dla Twoich nagrań
+                </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
-                    Równanie perkusji akustycznej - 100-150 zł/utwór
+                    <Check className="min-w-4 min-h-4 text-purple-400" />
+                    Prosty utwór do gotowego instrumentala - 200zł
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
-                    Arrangement assistance
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
-                    Basic mixing included
+                    <Check className="min-w-4 min-h-4 text-purple-400" />
+                    Standardowy zespół perkusja, bas, gitara, wokal od 350 zł
                   </li>
                 </ul>
               </div>
@@ -218,15 +214,15 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
+                    <Check className="min-w-4 h-4 text-purple-400" />
                     Pomoc przy aranżacji
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
+                    <Check className="min-w-4 h-4 text-purple-400" />
                     Profesjonalne nagranie
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
+                    <Check className="min-w-4 h-4 text-purple-400" />
                     Równanie dynamiczne oraz rytmiczne, poszczególnych śladów
                   </li>
                 </ul>
@@ -242,33 +238,23 @@ export default function Home() {
             <div className="bg-white/5 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/30 hover:border-purple-500 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-purple-400">
-                  <Award className="w-8 h-8" />
+                  <Star className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-semibold">Mixing & Mastering</h3>
+                <h3 className="text-2xl font-semibold">Dodatkowe usługi</h3>
               </div>
               <div className="mb-6">
-                <div className="text-2xl font-bold text-purple-400 mb-2">
-                  od 200zł
-                </div>
-                <p className="text-gray-400 mb-4">
-                  Profesjonalny Mix i Mastering dla Twoich nagrań
-                </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
-                    Prosty utwór do gotowego instrumentala - 200zł
+                    <Check className="min-w-4 h-4 text-purple-400" />
+                    Równanie perkusji akustycznej - 100-150 zł/utwór
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Standardowy zespół perkusja, bas, gitara, wokal od 350 zł
+                    Arrangement assistance
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />3 revision
-                    rounds
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />
-                    Stem mastering available
+                    <Check className="min-w-4 h-4 text-purple-400" />
+                    Basic mixing included
                   </li>
                 </ul>
               </div>
