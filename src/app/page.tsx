@@ -1,3 +1,5 @@
+// TODO: Temporary whole page is client side rendered. I need to do separate components for each section
+"use client";
 // import Image from "next/image";
 import {
   Mic2,
@@ -7,12 +9,16 @@ import {
   Users2,
   Award,
   ChevronRight,
-  Mail,
+  // Mail,
   Check,
   Plus,
 } from "lucide-react";
 
 export default function Home() {
+  const scrollToBottom = () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -31,10 +37,15 @@ export default function Home() {
             Lunar Sound Studio
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Where cosmic creativity meets professional sound engineering
+            Twoja muzyka zasługuje na najlepsze brzmienie. Profesjonalne
+            nagrania, miks i mastering w Lunar Sound Studio. Przyjdź, a ja zajmę
+            się resztą.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto transition-all">
-            Book a Session <ChevronRight className="w-5 h-5" />
+          <button
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto transition-all"
+            onClick={scrollToBottom}
+          >
+            Umów się na nagranie <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       </header>
@@ -43,24 +54,24 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">
-            Our Studio Features
+            Dlaczego Lunar Sound Studio?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: <Mic2 className="w-8 h-8" />,
-                title: "Pro Equipment",
-                desc: "Industry-standard microphones and preamps",
+                title: "Brzmienie, jakiego szukasz",
+                desc: "Nagrywam, miksuję i masteruję tak, żeby Twoja muzyka brzmiała dokładnie tak, jak sobie wymarzyłeś.",
               },
               {
                 icon: <Music2 className="w-8 h-8" />,
-                title: "Acoustic Design",
-                desc: "Perfectly tuned recording spaces",
+                title: "Dla wokalistów, zespołów i nie tylko",
+                desc: "Śpiewasz? Grasz w zespole? A może uczysz śpiewu i chcesz nagrać swoich uczniów? W studiu znajdziesz wszystko, czego potrzebujesz.",
               },
               {
                 icon: <Waveform className="w-8 h-8" />,
-                title: "Modern DAWs",
-                desc: "Latest recording and mixing software",
+                title: "Każdy instrument na swoim miejscu",
+                desc: "Jeśli nagrywacie jako zespół, dopilnuję, żeby każdy instrument brzmiał czysto i profesjonalnie – od perkusji aż po sam wokal.",
               },
             ].map((feature, index) => (
               <div
@@ -79,10 +90,11 @@ export default function Home() {
       {/* Equipment Gallery */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-6">Our Equipment</h2>
+          <h2 className="text-4xl font-bold text-center mb-6">
+            Sprzęt, który robi robotę
+          </h2>
           <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            {`We've carefully curated our gear collection to provide you with the
-            best possible sound quality`}
+            {`Topowe mikrofony, preampy, odpowiednia akustyka pomieszczenia oraz fachowa realizacja – wszystko po to, żeby nagranie było dopracowane w najmniejszym szczególe.`}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -152,26 +164,26 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Nasze usługi</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/5 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/30 hover:border-purple-500 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <div className="text-purple-400">
                   <Star className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-semibold">Music Production</h3>
+                <h3 className="text-2xl font-semibold">Dodatkowe usługi</h3>
               </div>
               <div className="mb-6">
-                <div className="text-2xl font-bold text-purple-400 mb-2">
+                {/* <div className="text-2xl font-bold text-purple-400 mb-2">
                   $80/hour
                 </div>
                 <p className="text-gray-400 mb-4">
                   Full production service for solo artists and bands
-                </p>
+                </p> */}
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Professional recording
+                    Równanie perkusji akustycznej - 100-150 zł/utwór
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
@@ -183,8 +195,11 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
-                Book Session <ChevronRight className="w-4 h-4" />
+              <button
+                onClick={scrollToBottom}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2"
+              >
+                Umów się na nagranie <ChevronRight className="w-4 h-4" />
               </button>
             </div>
 
@@ -193,36 +208,35 @@ export default function Home() {
                 <div className="text-purple-400">
                   <Users2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-semibold">Band Recording</h3>
+                <h3 className="text-2xl font-semibold">Realizacja nagrań</h3>
               </div>
               <div className="mb-6">
                 <div className="text-2xl font-bold text-purple-400 mb-2">
-                  $120/hour
+                  70zł/h
                 </div>
                 <p className="text-gray-400 mb-4">
-                  Complete band recording package
+                  Praca w studiu z solowymi artystami jak i całymi zespołami
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Multi-track recording
+                    Pomoc przy aranżacji
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Live room + isolation
+                    Profesjonalne nagranie
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Professional mixing
-                  </li>
-                  <li className="flex items-center gap-2 text-gray-300">
-                    <Check className="w-4 h-4 text-purple-400" />2 revision
-                    rounds
+                    Równanie dynamiczne oraz rytmiczne, poszczególnych śladów
                   </li>
                 </ul>
               </div>
-              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
-                Book Session <ChevronRight className="w-4 h-4" />
+              <button
+                onClick={scrollToBottom}
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2"
+              >
+                Umów się na nagranie <ChevronRight className="w-4 h-4" />
               </button>
             </div>
 
@@ -235,19 +249,19 @@ export default function Home() {
               </div>
               <div className="mb-6">
                 <div className="text-2xl font-bold text-purple-400 mb-2">
-                  From $300/track
+                  od 200zł
                 </div>
                 <p className="text-gray-400 mb-4">
-                  Professional mixing and mastering services
+                  Profesjonalny Mix i Mastering dla Twoich nagrań
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Professional mixing
+                    Prosty utwór do gotowego instrumentala - 200zł
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />
-                    Mastering for all formats
+                    Standardowy zespół perkusja, bas, gitara, wokal od 350 zł
                   </li>
                   <li className="flex items-center gap-2 text-gray-300">
                     <Check className="w-4 h-4 text-purple-400" />3 revision
@@ -259,8 +273,11 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2">
-                Book Session <ChevronRight className="w-4 h-4" />
+              <button
+                onClick={scrollToBottom}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition-all flex items-center justify-center gap-2"
+              >
+                Umów się na nagranie <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -270,14 +287,22 @@ export default function Home() {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-t from-black to-purple-900/20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">Ready to Create?</h2>
+          <h2 className="text-4xl font-bold mb-8">Masz pytania?</h2>
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            {`Let's bring your musical vision to life. Contact us to schedule a
-            studio tour or book your session.`}
+            {`Chcesz dopytać o szczegóły? Śmiało, pisz lub dzwoń – odpowiem na wszystko.`}
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto">
+          {/* <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 mx-auto">
             <Mail className="w-5 h-5" /> Contact Us
-          </button>
+          </button> */}
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Email: kontakt.lunar@gmail.com
+          </p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Tel: 790 524 598
+          </p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Addres: ul. Boya-Żeleńskiego 5, 31-105 Rzeszów
+          </p>
         </div>
       </section>
 
