@@ -13,6 +13,11 @@ import {
   Check,
   Plus,
 } from "lucide-react";
+import Eq1 from "../assets/eq1.jpeg";
+import Eq2 from "../assets/eq2.jpeg";
+import Eq3 from "../assets/eq3.jpeg";
+import Eq4 from "../assets/eq4.jpeg";
+import Eq5 from "../assets/eq5.jpeg";
 
 export default function Home() {
   const scrollToBottom = () => {
@@ -99,38 +104,32 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                image:
-                  "https://images.unsplash.com/photo-1516575334481-f85287c2c82d?auto=format&fit=crop&q=80",
+                image: Eq1.src,
                 title: "Neumann U87 Microphone",
                 category: "Microphones",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&q=80",
+                image: Eq2.src,
                 title: "SSL Mixing Console",
                 category: "Consoles",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1607435097405-db48f377bff6?auto=format&fit=crop&q=80",
+                image: Eq3.src,
                 title: "Pro Tools HDX System",
                 category: "Recording",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&q=80",
+                image: Eq4.src,
                 title: "Vintage Outboard Gear",
                 category: "Processing",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&fit=crop&q=80",
+                image: Eq5.src,
                 title: "Monitoring System",
                 category: "Speakers",
               },
               {
-                image:
-                  "https://images.unsplash.com/photo-1516575334481-f85287c2c82d?auto=format&fit=crop&q=80",
+                image: Eq1.src,
                 title: "Instrument Collection",
                 category: "Instruments",
               },
