@@ -4,6 +4,7 @@ import { Services } from "@/components/services";
 import { Hero } from "@/components/hero";
 import { Features } from "@/components/features";
 import { Equipment } from "@/components/equipment";
+import { Realizations } from "@/components/realizations";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <Equipment />
       <Services />
+      <Realizations />
       <Contact />
       <Footer />
     </div>

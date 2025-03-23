@@ -3,7 +3,7 @@ import Eq2 from "../assets/eq2.jpeg";
 import Eq3 from "../assets/eq3.jpeg";
 import Eq4 from "../assets/eq4.jpeg";
 import Eq5 from "../assets/eq5.jpeg";
-import Eq6 from "../assets/eq6.jpeg";
+// import Eq6 from "../assets/eq6.jpeg";
 
 export const Equipment = () => {
   return (
