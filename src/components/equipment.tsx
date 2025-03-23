@@ -26,9 +26,9 @@ export const Equipment = () => {
                 alt={item.category}
                 className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="text-purple-400 text-sm mb-2">
+                  <div className="text-purple-400 mb-2 font-bold">
                     {item.category}
                   </div>
                   {item.items.map((item, index) => (
@@ -63,7 +63,6 @@ const equipment = [
   {
     image: Eq2.src,
     items: [
-      "Konwerter AD/DA",
       "Universal Audio Apollo",
       "Neve1073lb",
       "Chandler TG2",
